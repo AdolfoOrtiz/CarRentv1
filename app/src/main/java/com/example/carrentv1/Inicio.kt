@@ -54,7 +54,7 @@ fun LoginScreen() {
                     .width(200.dp)
                     .height(48.dp)
             ) {
-                Text(text = "Hola", color = Color.White)
+                Text(text = "Ingresar", color = Color.White)
             }
 
             // Botón "Registrarse"
