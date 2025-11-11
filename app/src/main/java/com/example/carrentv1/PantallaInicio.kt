@@ -31,7 +31,7 @@ fun PantallaInicio() {
         ) {
         Image(
             painter = painterResource(id = R.drawable.car_rent),
-            contentDescription = "Imagen gagagagga",
+            contentDescription = "Imagen del logo",
             modifier = Modifier.size(150.dp) // Tamaño opcional
         )
     }
