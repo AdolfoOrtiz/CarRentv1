@@ -108,7 +108,9 @@ fun ScreenAuto(navController: NavController){
             }
 
             Button(
-                onClick = { /* Acción de alquilar */ },
+                onClick = { /* Acción de alquilar */
+                    navController.navigate(Routes.screenPago)
+                },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7D32))
             ) {
                 Text(text = "Alquilar")

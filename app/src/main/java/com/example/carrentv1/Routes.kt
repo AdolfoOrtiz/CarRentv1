@@ -17,4 +17,14 @@ object Routes {
     var registro = "Registro"
 
     var mainmenu = "MainMenu"
+
+    var agregarAutoDos = "AgregarAutoDos"
+
+    var agregarAutoUno = "AgregarAutoUno"
+
+    var screenPago = "ScreenPago"
+
+    var screenPagoDos = "ScreenPagoDos"
+
+    var screenAjustes = "ScreenAjustes"
 }
