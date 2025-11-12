@@ -50,14 +50,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun MainMenu(){
-    LearnNavDrawer()
+fun MainMenu(navController: NavController){
+    LearnNavDrawer(navController)
 }
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LearnNavDrawer() {
+fun LearnNavDrawer(navController: NavController) {
     val navController = rememberNavController()
     val coroutineScope = rememberCoroutineScope()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)

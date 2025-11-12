@@ -17,11 +17,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.draw.clip
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.carrentv1.R
 
-@Preview
 @Composable
-fun LoginScreen() {
+fun Inicio(navController: NavController) {
     // Fondo blanco y contenido centrado
     Box(
         modifier = Modifier
@@ -46,7 +47,9 @@ fun LoginScreen() {
 
             // Botón "Ingresar"
             Button(
-                onClick = { /* Navegar a pantalla de login */ },
+                onClick = { /* Navegar a pantalla de login */
+                    navController.navigate(Routes.login)
+                },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7EB6FF)),
                 shape = RoundedCornerShape(50),
                 modifier = Modifier
@@ -58,7 +61,9 @@ fun LoginScreen() {
 
             // Botón "Registrarse"
             Button(
-                onClick = { /* Navegar a pantalla de registro */ },
+                onClick = { /* Navegar a pantalla de registro */
+                    navController.navigate(Routes.registro)
+                },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7EB6FF)),
                 shape = RoundedCornerShape(50),
                 modifier = Modifier
