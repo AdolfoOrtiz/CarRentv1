@@ -13,6 +13,8 @@ import com.google.accompanist.navigation.animation.composable
 import androidx.navigation.compose.rememberNavController
 import kotlinx.coroutines.delay
 import androidx.compose.runtime.LaunchedEffect
+import com.example.loginui.LoginScreen
+import com.example.registroapp.ui.screens.RegistroScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +40,10 @@ fun AppNavigation() {
         popExitTransition = { fadeOut(animationSpec = tween(700)) }
     ) {
         composable("splash") { SplashScreen(navController) }
-        composable("login") { LoginScreen() }
+        composable(Routes.inicio) { Inicio(navController) }
+        composable(Routes.login) { LoginScreen(navController)}
+        composable(Routes.registro) { RegistroScreen(navController)}
+        composable(Routes.mainmenu) { MainMenu(navController)}
     }
 }
 
@@ -47,7 +52,7 @@ fun SplashScreen(navController: NavHostController) {
 
     LaunchedEffect(Unit) {
         delay(3000)
-        navController.navigate("login") {
+        navController.navigate(Routes.inicio) {
             popUpTo("splash") { inclusive = true }
         }
     }
