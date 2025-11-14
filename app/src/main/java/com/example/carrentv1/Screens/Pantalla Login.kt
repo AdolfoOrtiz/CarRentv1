@@ -20,13 +20,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.carrentv1.Navegation.AppScreens
 import com.example.carrentv1.R
-import com.example.carrentv1.Routes
+
 
 @Composable
-fun LoginScreen(
-  navController: NavController
-) {
+fun PantallaLoginScreen(navController: NavController) {
     var user by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
@@ -47,15 +46,10 @@ fun LoginScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 12.dp)
-                    .clickable { navController.navigate(Routes.inicio) },
+                    .clickable {  },
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(
-                    imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Volver",
-                    tint = Color(0xFF2F2F2F),
-                    modifier = Modifier.size(28.dp)
-                )
+
             }
 
             Spacer(modifier = Modifier.height(40.dp))
@@ -95,7 +89,7 @@ fun LoginScreen(
 
             // Botón Acceder
             Button(
-                onClick = { navController.navigate(Routes.mainmenu)},
+                onClick = { navController.navigate(route = AppScreens.dashboard.route) },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xFF4285F4)
                 ),
